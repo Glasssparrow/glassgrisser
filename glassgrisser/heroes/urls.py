@@ -3,6 +3,6 @@ from .views import *
 
 
 urlpatterns = [
-    path("", heroes_table),
+    path("", heroes_table, name="heroes"),
     path("<str:hero_name>", hero_page)
 ]
