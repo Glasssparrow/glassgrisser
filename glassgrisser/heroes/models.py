@@ -39,6 +39,11 @@ class Hero(models.Model):
         "Hero", related_name="bond_unlock", blank=True, symmetrical=False
     )
 
+    class Meta:
+        verbose_name = "Герой"
+        verbose_name_plural = "Герои"
+        ordering = ["hero_id"]
+
 
 class Rarity(models.Model):
     rarity_id = models.CharField(max_length=255, primary_key=True)
