@@ -2,5 +2,7 @@
 
 {% block content %}
 <h1>Placeholder</h1>
-<p>Здесь должна быть таблица героев.</p>
+    {% for hero in heroes %}
+    <p><a href="{{ hero.get_absolute_url }}">{{hero.hero_name}}</a></p>
+    {% endfor%}
 {% endblock content %}

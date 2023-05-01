@@ -1,4 +1,5 @@
 from django.db import models
+from django.urls import reverse
 
 
 class Hero(models.Model):
@@ -38,6 +39,9 @@ class Hero(models.Model):
     bonds_lock = models.ManyToManyField(
         "Hero", related_name="bond_unlock", blank=True, symmetrical=False
     )
+
+    def get_absolute_url(self):
+        return reverse("hero_page", kwargs={"hero_url": self.hero_id})
 
     class Meta:
         verbose_name = "Герой"

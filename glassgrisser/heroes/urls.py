@@ -4,5 +4,5 @@ from .views import *
 
 urlpatterns = [
     path("", heroes_table, name="heroes"),
-    path("<str:hero_name>", hero_page)
+    path("<str:hero_url>", hero_page, name="hero_page")
 ]
