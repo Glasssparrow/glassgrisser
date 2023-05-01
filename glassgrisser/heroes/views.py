@@ -9,7 +9,7 @@ menu = ["Главная страница", "123"]
 def heroes_table(request):
     heroes = Hero.objects.all()
     arguments = {
-        "title": "title",
+        "title": "placeholder",
         "menu": menu,
         "heroes": heroes
     }
